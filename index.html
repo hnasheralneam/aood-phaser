@@ -17,18 +17,21 @@ body {
    display: flex;
    justify-content: center;
    align-items: center;
+   font-size: 0; /* remove space under canvas */
 }
 
 #game-container {
+   display: block;
    overflow: hidden;
    border-radius: 1rem;
    box-shadow: 0 1rem 1rem #bbb;
    background-color: #000;
+   transform: scale(2);
 }
 </style>
 <body>
    <div>
-      <div id="game-container"></div>
+      <div id="game-container" onclick="regenerateMap()" title="click to generate new map"></div>
    </div>
 </body>
 <script src="main.js"></script>
